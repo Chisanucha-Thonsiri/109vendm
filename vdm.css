@@ -132,6 +132,30 @@ background-color: rgb(255, 255, 0);
 .pay2vsb{
     transform: scale(1);
 }
+.pmcheck{
+    position: relative;
+    height:400px;
+    width:750px;
+    background-color: rgb(255, 242, 0);
+    border: 1px solid black;
+    border-radius: 10px;
+    top:-1500px;
+    left:250px;
+    transition: transform 0.3s,top 0.3s;
+    transform: scale(0.000001);
+}
+.pmcheckvs{
+    transform: scale(1);
+}
+.foodic{
+    top:-1915px;
+    left: 520px;
+    transition: transform 0.3s,top 0.3s;
+    transform: scale(0.000001);
+}
+.foodicvs{
+    transform: scale(1);
+}
 @-webkit-keyframes bkflip{
     0%{
         transform: rotateY(0deg) ;

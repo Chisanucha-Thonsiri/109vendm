@@ -25,7 +25,7 @@
     
     
     </div>
-    <div id="mp1"class="menusl pay1">
+    <div id="mp1"class="menusl pay1" onclick="tocook()">
         <script src="https://cdn.lordicon.com/lordicon-1.1.0.js"></script>
 <lord-icon
     src="https://cdn.lordicon.com/ofklvwkr.json"
@@ -34,7 +34,7 @@
     style="width:250px;height:250px">
 </lord-icon>
     </div>
-    <div id="mp2"class="menusl pay2">
+    <div id="mp2"class="menusl pay2" onclick="tocook()">
         <script src="https://cdn.lordicon.com/lordicon-1.1.0.js"></script>
 <lord-icon
     src="https://cdn.lordicon.com/avcjklpr.json"
@@ -43,6 +43,33 @@
     style="width:250px;height:250px">
 </lord-icon>
     </div>
+    <div id="mp3" class="pmcheck"><strong>
+        <h1>กำลังตรวจสอบสถานะการจ่ายเงิน</h1>
+        <p >สถานะ:<p id="pmst">กำลังตรวจสอบ</p></p></strong>
+        <script src="https://cdn.lordicon.com/lordicon-1.1.0.js"></script>
+        <lord-icon id="ic1"
+            src="https://cdn.lordicon.com/unukghxb.json"
+            trigger="loop"
+            delay="500"
+            style="width:150px;height:150px">
+        </lord-icon>
+    </div>
+    <div  id="mf1"class="menusl foodic">
+
+        <script src="https://cdn.lordicon.com/lordicon-1.1.0.js"></script>
+<lord-icon id="ic2"
+    src="https://cdn.lordicon.com/mhddipcx.json"
+    trigger="loop"
+    delay="500"
+    style="width:150px;height:150px">
+</lord-icon>
+<h1 id="foodst" style="color: blue; font-size: 25px;">กำลังเตรียมวัตถุดิบ</h1>
+    </div>
+
+
+
+
+
 </div>
 </body>
 <script>
@@ -53,6 +80,12 @@
     let ms1f = document.getElementById("ms1");
     let mp1 = document.getElementById("mp1");
     let mp2 = document.getElementById("mp2");
+    let mp3 = document.getElementById("mp3");
+    let pmst = document.getElementById("pmst");
+    let ic1 = document.getElementById("ic1");
+    let ic2 = document.getElementById("ic2");
+    let mf1 = document.getElementById("mf1");
+    let foodst = document.getElementById("foodst");
     
 
 function flipm1(){
@@ -69,11 +102,54 @@ m1f.classList.add("gone");
 m2f.classList.add("gone");
 m3f.classList.add("gone");
 ms1f.classList.add("gone");
-mt.innerHTML = "เลือกวิธีชำระเงินเลอ";
+mt.innerHTML = "เลือกวิธีชำระเงินเลย";
 mp1.classList.add("pay1vsb");
 setTimeout(() => {
     mp2.classList.add("pay2vsb");
       }, 300);
+}
+function tocook(){
+    mp3.classList.add("pmcheckvs");
+    setTimeout(() => {
+        pmst.innerHTML = "กำลังยืนยันการชำระเงิน";
+        pmst.style = "color:red;";
+      }, 1000);
+      setTimeout(() => {
+        pmst.innerHTML = "พบการชำระเงินแล้ว";
+        pmst.style = "color:red;";
+      }, 2000);
+      setTimeout(() => {
+        pmst.innerHTML = "กำลังตรวจสอบจำนวนเงิน";
+        pmst.style = "color:red;";
+      }, 4000);
+      setTimeout(() => {
+        pmst.innerHTML = "ชำระเงินเสร็จสิ้นแล้วกรุณารอสักครู่";
+        pmst.style = "color:green;";
+        ic1.src = "https://cdn.lordicon.com/cgzlioyf.json";
+      }, 5000);
+      setTimeout(() => {
+        mp3.classList.add("gone");
+        mp1.classList.add("gone");
+        mp2.classList.add("gone");
+        mt.innerHTML = "กำลังเตรียมอาหาร..";
+        mf1.classList.add("foodicvs");
+      }, 6000);
+      setTimeout(() => {
+        foodst.innerHTML = "กำลังปรุงรส";
+      }, 7000);
+      setTimeout(() => {
+        foodst.innerHTML = "กำลังอุ่นอาหาร";
+        ic2.src = "https://cdn.lordicon.com/kunpyuuw.json"
+      }, 9000);
+      setTimeout(() => {
+        foodst.innerHTML = "กำลังแพ็คอาหาร";
+        ic2.src = "https://cdn.lordicon.com/ssoifezn.json"
+      }, 12000);
+      setTimeout(() => {
+        foodst.innerHTML = "รับอาหารเลย!";
+        foodst.style = "color:green;";
+        ic2.src = "https://cdn.lordicon.com/dxlthpvq.json"
+      }, 15000);
 }
 
 
