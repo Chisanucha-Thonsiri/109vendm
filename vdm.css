@@ -111,6 +111,20 @@ background-color: rgb(255, 255, 0);
     left:160px;
     background-color: rgb(255, 0, 0);
     }
+    .but4{
+        top:-370px;
+        left:720px;
+        height: 50px;
+        width: 50px;
+        background-color: rgb(255, 0, 0);
+        }
+        .but5{
+            top:-340px;
+            left:720px;
+            height: 50px;
+            width: 50px;
+            background-color: rgb(255, 0, 0);
+            }
 .gone{
     opacity:0;
 }
@@ -155,6 +169,84 @@ background-color: rgb(255, 255, 0);
 }
 .foodicvs{
     transform: scale(1);
+}
+.foodinfo{
+    position: relative;
+    width:750px;
+    height:400px;
+    background-color: rgb(255, 250, 149);
+    top:-2100px;
+    border: 1px solid black;
+    left:250px;
+    border-radius: 10px;
+    transform: scale(0.00000001);
+    transition: transform 0.5s,top 0.5s;
+}
+.foodinfovs{
+    transform: scale(1);
+    z-index: 99;
+}
+.foodinfo img{
+    width :150px;
+    height:150px;
+    position: relative;
+    top:10px;
+}
+.foodinfo p{
+    font-size: 20px;
+    line-height: 1.5;
+    position: relative;
+    top:-15px;
+   
+}
+.nofoodinfo{
+    position: relative;
+    width:750px;
+    height:300px;
+    background-color: rgb(255, 250, 149);
+    top:-2500px;
+    border: 1px solid black;
+    left:250px;
+    border-radius: 10px;
+    transform: scale(0.0000000001);
+    transition: transform 0.5s,top 0.5s;
+}
+.nofoodinfovs{
+    transform: scale(1);
+    z-index: 100;
+}
+.nofoodinfo img{
+    width :150px;
+    height:150px;
+    position: relative;
+    top:-50px;
+}
+.nofoodinfo p{
+    font-size: 20px;
+    line-height: 1.5;
+    position: relative;
+    top:-60px;
+   
+}
+.nofoodinfo h1{
+    color: red;
+
+    position: relative;
+    top:-60px;
+   
+}
+.reload{
+    position: relative;
+    top:-2600px;
+   transform: scale(1.6);
+   opacity: 0;
+   border: none;
+   background-color: rgb(255, 131, 131);
+   border-radius: 60px ;
+
+}
+.reloadvs{
+   opacity: 1;
 }
 @-webkit-keyframes bkflip{
     0%{

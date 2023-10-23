@@ -9,8 +9,8 @@
     <strong><p id="maintxt">เลือกเมนูเลย!</p></strong>
     <div id="m1" class="menusl menu1" onclick="flipm1()">
     </div>
-    <div  id="m2"class="menusl menu2"></div>
-    <div  id="m3"class="menusl menu3"></div>
+    <div  id="m2"class="menusl menu2" onclick="opnofood()"></div>
+    <div  id="m3"class="menusl menu3" onclick="opnofood()"></div>
     <div id="ms1"class="menusl menus1" >
         <h1>ข้าวต้ม</h1>
        <strong> <p>
@@ -18,7 +18,7 @@
 ราคา:<span class="red"> 69 บาท</span><br>
 สถานะสินค้า:<span class="green"> พร้อมให้บริการ</span>
 <div class="bt but1" onclick="topcp()"><i class="fa-solid fa-cart-shopping"></i></div>
-<div class="bt but2"><i class="fa-solid fa-circle-info"></i></div>
+<div class="bt but2" onclick="opinfo1()"><i class="fa-solid fa-circle-info"></i></div>
 <div class="bt but3" onclick="flipm1close()"><i class="fa-solid fa-xmark"></i></div>
 
         </p></strong>
@@ -65,8 +65,27 @@
 </lord-icon>
 <h1 id="foodst" style="color: blue; font-size: 25px;">กำลังเตรียมวัตถุดิบ</h1>
     </div>
+    <div id="fi1"class="foodinfo">
+    <img src="https://img.ifunny.co/images/099c26a1e1e039fd763c5b18d7ec54aa57e3722a35219df8cd232edba8642866_1.jpg" alt="">
+    <h1>ข้าวหน้าปลาดุก</h1>
+    <strong>
+    <p style="color: blue;">
+เบอร์เกอร์ไก่คลีนที่ลดไขมันจำนวนมหาศาลเหมาะกับผู้ที่<br>กำลังลดน้ำหนัก อิสลามก็ทานได้ ราคาย่อมเยาว์<br>
+ราคา:69บาท
+<div class="bt but4" onclick="closeinfo1()"><i class="fa-solid fa-xmark"></i></div>
+    </p></strong></div>
 
 
+
+    <div id="nofood"class="nofoodinfo">
+        <img src="Warningsign.png">
+        <h1 >ไม่มีสินค้าในขณะนี้</h1>
+        <strong>
+        <p style="color: blue;">
+    สินค้ายังไม่พร้อมให้บริการขณะนี้ แต่จะพร้อมให้บริการเร็วๆนี้ <br>ขออภัยในความไม่สะดวก
+    <div class="bt but5" onclick="closenofood()"><i class="fa-solid fa-xmark"></i></div>
+        </p></strong></div>
+        <button id="reload" class="reload"onClick="window.location.reload();"><strong>รับสินค้า</strong></button>
 
 
 
@@ -86,6 +105,9 @@
     let ic2 = document.getElementById("ic2");
     let mf1 = document.getElementById("mf1");
     let foodst = document.getElementById("foodst");
+    let fi1 = document.getElementById("fi1");
+    let nofood = document.getElementById("nofood");
+    let reload = document.getElementById("reload");
     
 
 function flipm1(){
@@ -149,7 +171,20 @@ function tocook(){
         foodst.innerHTML = "รับอาหารเลย!";
         foodst.style = "color:green;";
         ic2.src = "https://cdn.lordicon.com/dxlthpvq.json"
+        reload.classList.add("reloadvs");
       }, 15000);
+}
+function opinfo1(){
+fi1.classList.add("foodinfovs");
+}
+function closeinfo1(){
+fi1.classList.remove("foodinfovs");
+}
+function opnofood(){
+nofood.classList.add("nofoodinfovs");
+}
+function closenofood(){
+    nofood.classList.remove("nofoodinfovs");
 }
 
 
