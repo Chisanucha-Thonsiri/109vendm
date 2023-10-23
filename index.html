@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="vdm.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mali">
+</head>
+<body>
+<div class="wrappermain">
+    <strong><p id="maintxt">เลือกเมนูเลย!</p></strong>
+    <div id="m1" class="menusl menu1" onclick="flipm1()">
+    </div>
+    <div  id="m2"class="menusl menu2"></div>
+    <div  id="m3"class="menusl menu3"></div>
+    <div id="ms1"class="menusl menus1" >
+        <h1>ข้าวต้ม</h1>
+       <strong> <p>
+ส้มตำราคาย่อมเยาว์กินวันนี้<br>พน.อ้วนเลย<br>
+ราคา:<span class="red"> 69 บาท</span><br>
+สถานะสินค้า:<span class="green"> พร้อมให้บริการ</span>
+<div class="bt but1" onclick="topcp()"><i class="fa-solid fa-cart-shopping"></i></div>
+<div class="bt but2"><i class="fa-solid fa-circle-info"></i></div>
+<div class="bt but3" onclick="flipm1close()"><i class="fa-solid fa-xmark"></i></div>
+
+        </p></strong>
+    
+    
+    </div>
+    <div id="mp1"class="menusl pay1">
+        <script src="https://cdn.lordicon.com/lordicon-1.1.0.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/ofklvwkr.json"
+    trigger="loop"
+    delay="500"
+    style="width:250px;height:250px">
+</lord-icon>
+    </div>
+    <div id="mp2"class="menusl pay2">
+        <script src="https://cdn.lordicon.com/lordicon-1.1.0.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/avcjklpr.json"
+    trigger="loop"
+    delay="500"
+    style="width:250px;height:250px">
+</lord-icon>
+    </div>
+</div>
+</body>
+<script>
+    let mt = document.getElementById("maintxt");
+    let m1f = document.getElementById("m1");
+    let m2f = document.getElementById("m2");
+    let m3f = document.getElementById("m3");
+    let ms1f = document.getElementById("ms1");
+    let mp1 = document.getElementById("mp1");
+    let mp2 = document.getElementById("mp2");
+    
+
+function flipm1(){
+m1f.classList.add("menu1flip");
+m1f.onclick = flipm1close ;
+}
+function flipm1close(){
+    
+m1f.classList.remove("menu1flip");
+m1f.onclick = flipm1 ;
+}
+function topcp(){
+m1f.classList.add("gone");
+m2f.classList.add("gone");
+m3f.classList.add("gone");
+ms1f.classList.add("gone");
+mt.innerHTML = "เลือกวิธีชำระเงินเลอ";
+mp1.classList.add("pay1vsb");
+setTimeout(() => {
+    mp2.classList.add("pay2vsb");
+      }, 300);
+}
+
+
+</script>
+<script src="https://kit.fontawesome.com/b02d353d44.js" crossorigin="anonymous"></script>
