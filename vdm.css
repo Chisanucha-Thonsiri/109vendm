@@ -15,7 +15,7 @@ body{
     position: relative;
         height: 700px;
         width:1300px;
-        background-color: rgba(240, 248, 255, 0.696);
+        background-color: rgba(196, 255, 177, 0.696);
         border: 3px solid rgb(255, 255, 255);
         border-radius: 10px;
         left: 0px;
@@ -41,7 +41,8 @@ body{
 }
 .menu1{
     left: 180px;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb554jiY3Anc7_gaWrOrtG98gePAX0qmAprA&usqp=CAU);
+    background-size: 250px 250px;
+    background-image: url(https://s.isanook.com/wo/0/ud/10/51845/3.jpg?ip/resize/w728/q80/jpg);
 }
 .menu1flip{
         animation:bkflip 1000000s infinite;
@@ -67,14 +68,14 @@ body{
 .menu2{
     top:-252px;
     left: 520px;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgTBnP1KY2vH1cABvWpkJnrYXLOy-mlS418Q&usqp=CAU);
+    background-image: url(https://img.kapook.com/u/2016/surauch/cOOK/clean2.jpg);
     background-repeat: no-repeat;
     background-size: 250px 250px;
 }
 .menu3{
     top:-504px;
     left: 860px;
-    background-image: url(https://img.ifunny.co/images/099c26a1e1e039fd763c5b18d7ec54aa57e3722a35219df8cd232edba8642866_1.jpg);
+    background-image: url(https://img.kapook.com/u/2016/surauch/cOOK/clean9.jpg);
     background-repeat: no-repeat;
     background-size: 250px 250px;
 }
@@ -273,9 +274,28 @@ background-color: rgb(255, 255, 0);
     @keyframes flicker {
         0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
             opacity: .99;
-            box-shadow:0px 0px 20px 0px #d3daff;
+            box-shadow:0px 0px 20px 0px #5dff5d;
         }
         20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
             box-shadow: none;
         }
+    }
+    .watermark{
+        position: relative;
+        top:-2610px;
+        left:-220px;
+        transform: scale(0.8);
+        z-index: -2;
+    }
+    .watermark img{
+        top:-2500px;
+
+        width: 70px ;
+        height: 70px;
+        border-radius: 360px;
+    }
+    .watermark h1{
+        top:-80px;
+        left: 300px;
+        position: relative;
     }
